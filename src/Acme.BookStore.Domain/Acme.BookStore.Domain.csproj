@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Acme.BookStore.Domain.Shared\Acme.BookStore.Domain.Shared.csproj" />
-  </ItemGroup>
+  <ProjectReference Include="..\..\modules\ModuleAuthor\src\ModuleAuthor.Domain\ModuleAuthor.Domain.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Emailing" Version="7.4.2" />

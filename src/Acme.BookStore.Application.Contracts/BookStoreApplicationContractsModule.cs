@@ -1,4 +1,4 @@
-﻿using Volo.Abp.Account;
+using Volo.Abp.Account;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
 using Volo.Abp.Modularity;
@@ -6,6 +6,7 @@ using Volo.Abp.ObjectExtending;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
+using ModuleAuthor;
 
 namespace Acme.BookStore;
 
@@ -19,7 +20,8 @@ namespace Acme.BookStore;
     typeof(AbpTenantManagementApplicationContractsModule),
     typeof(AbpObjectExtendingModule)
 )]
-public class BookStoreApplicationContractsModule : AbpModule
+[DependsOn(typeof(ModuleAuthorApplicationContractsModule))]
+    public class BookStoreApplicationContractsModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {

@@ -13,7 +13,7 @@
     <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.3.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.10" />
-  </ItemGroup>
+  <ProjectReference Include="..\..\modules\ModuleAuthor\src\ModuleAuthor.Blazor.WebAssembly\ModuleAuthor.Blazor.WebAssembly.csproj" /></ItemGroup>
 
   <ItemGroup>
 	<PackageReference Include="Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme" Version="7.4.2" />

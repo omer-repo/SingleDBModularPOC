@@ -18,7 +18,7 @@
     <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Shared" Version="7.4.2" />
     <PackageReference Include="Volo.Abp.SettingManagement.Domain.Shared" Version="7.4.2" />
     <PackageReference Include="Volo.Abp.OpenIddict.Domain.Shared" Version="7.4.2" />
-  </ItemGroup>
+  <ProjectReference Include="..\..\modules\ModuleAuthor\src\ModuleAuthor.Domain.Shared\ModuleAuthor.Domain.Shared.csproj" /></ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Localization\BookStore\*.json" />
