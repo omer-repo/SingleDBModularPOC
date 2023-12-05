@@ -28,6 +28,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.VirtualFileSystem;
+using ModuleAuthor;
 
 namespace Acme.BookStore;
 
@@ -131,6 +132,7 @@ public class BookStoreHttpApiHostModule : AbpModule
         Configure<AbpAspNetCoreMvcOptions>(options =>
         {
             options.ConventionalControllers.Create(typeof(BookStoreApplicationModule).Assembly);
+            options.ConventionalControllers.Create(typeof(ModuleAuthorApplicationModule).Assembly);
         });
     }
 

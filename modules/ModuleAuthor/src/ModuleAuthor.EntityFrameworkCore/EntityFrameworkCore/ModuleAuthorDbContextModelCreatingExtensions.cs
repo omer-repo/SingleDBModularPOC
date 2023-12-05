@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 
 namespace ModuleAuthor.EntityFrameworkCore;
 
@@ -29,5 +30,11 @@ public static class ModuleAuthorDbContextModelCreatingExtensions
             b.HasIndex(q => q.CreationTime);
         });
         */
+
+        builder.Entity<Writer>(b =>
+        {
+            b.ToTable(ModuleAuthorDbProperties.DbTablePrefix + "Writers", ModuleAuthorDbProperties.DbSchema);
+            b.ConfigureByConvention();
+        });
     }
 }

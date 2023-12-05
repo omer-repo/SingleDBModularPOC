@@ -10,7 +10,7 @@ public class ModuleAuthorDbContext : AbpDbContext<ModuleAuthorDbContext>, IModul
     /* Add DbSet for each Aggregate Root here. Example:
      * public DbSet<Question> Questions { get; set; }
      */
-
+    public DbSet<Writer> Writers { get; set; }
     public ModuleAuthorDbContext(DbContextOptions<ModuleAuthorDbContext> options)
         : base(options)
     {
